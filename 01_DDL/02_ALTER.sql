@@ -1,20 +1,25 @@
+/*
 ====================================================
+PROJECT: Employee Management System
 TOPIC: SQL DDL
-COMMAND: ALTER
-
-BUSINESS CASE:
-HR wants to capture employee email information
-and increase the department field size.
+COMMAND: ALTER TABLE
 ====================================================
 */
 
--- Add Email Column
-ALTER TABLE Employees
-ADD EMAIL VARCHAR(50);
+-- BUSINESS REQUIREMENT 1:
+-- HR wants to increase the size of the LOCATION column.
 
--- Increase Department Column Size
-ALTER TABLE Employees
-ALTER COLUMN DEPARTMENT VARCHAR(30);
+ALTER TABLE EMPLOYEES
+ALTER COLUMN LOCATION VARCHAR(25);
 
--- View Updated Table Structure
-EXEC SP_HELP Employees;
+
+-- BUSINESS REQUIREMENT 2:
+-- HR wants to capture the employee's designation.
+
+ALTER TABLE EMPLOYEES
+ADD DESIGNATION VARCHAR(25);
+
+
+-- View the updated table structure
+
+EXEC SP_HELP EMPLOYEES;
