@@ -1,0 +1,32 @@
+## 💼 Practical Demonstration
+
+This project demonstrates how SQL DDL can support changing business requirements.
+
+### Scenario 1: Create Employee Structure
+
+HR requires a structured employee table to store employee information.
+
+**SQL:** `CREATE TABLE`
+
+### Scenario 2: Modify Employee Structure
+
+HR later requires additional employee information.
+
+**SQL:** `ALTER TABLE`
+
+Examples:
+
+- Modify an existing column
+- Add a new column
+
+### Scenario 3: Clear Table Data
+
+Temporary employee data needs to be removed while retaining the table structure.
+
+**SQL:** `TRUNCATE TABLE`
+
+### Scenario 4: Remove Obsolete Structure
+
+An obsolete employee table needs to be removed.
+
+**SQL:** `DROP TABLE`
