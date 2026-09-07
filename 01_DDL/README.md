@@ -115,3 +115,15 @@ The following screenshot shows the successful execution of the Employee table cr
 
 ![DDL CREATE TABLE Execution](DDL_CREATE_TABLE_EXECUTION.png)
 
+---
+
+## 📸 ALTER TABLE Execution Evidence
+
+The following screenshot demonstrates the successful execution of ALTER TABLE commands in Microsoft SQL Server.
+
+The exercise covers:
+
+- Modifying an existing column using `ALTER COLUMN`
+- Adding a new column using `ADD`
+
+![ALTER TABLE Execution](DDL_ALTER_TABLE_SUCCESS.PNG)
