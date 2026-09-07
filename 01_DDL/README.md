@@ -168,3 +168,46 @@ HR wants to capture additional employee information.
 ```sql
 ALTER TABLE EMPLOYEES
 ADD DESIGNATION VARCHAR(25);
+
+
+🚀 SQL Learning Journey
+
+Business Analyst | SQL | Data Analytics
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 About This Portfolio
+
+My hands-on journey...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 SQL Skills
+
+DDL       ✅
+DML       ⬜
+Operators ⬜
+Functions ⬜
+Joins     ⬜
+...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⭐ Featured Projects
+
+Employee Analytics
+Sales Analytics
+Customer Analytics
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📂 Learning Modules
+
+01 DDL
+02 DML
+03 Operators
+...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌱 1% Better Than Yesterday
