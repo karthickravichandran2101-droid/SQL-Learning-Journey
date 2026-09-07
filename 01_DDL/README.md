@@ -47,6 +47,47 @@ The organization needs an Employee table that can be:
 
 ---
 
+---
+
+## 💼 Practical Demonstration
+
+This project demonstrates how SQL DDL commands can be applied to real-world business requirements.
+
+### Scenario 1: Create Employee Structure
+
+**Business Requirement:**
+
+The HR department requires a structured table to store employee information.
+
+**SQL Solution:**
+
+`CREATE TABLE`
+
+The Employee table is created with fields such as Employee ID, Employee Name, Department, Salary and Joining Date.
+
+---
+
+### Scenario 2: Modify Employee Structure
+
+**Business Requirement:**
+
+HR later requires changes to the employee database structure.
+
+**SQL Solution:**
+
+`ALTER TABLE`
+
+Examples demonstrated:
+
+- Modify an existing column using `ALTER COLUMN`
+- Add a new column using `ADD`
+
+Example:
+
+```sql
+ALTER TABLE EMPLOYEES
+ADD DESIGNATION VARCHAR(25);
+
 ## 🛠️ Technology
 
 - Microsoft SQL Server
@@ -178,7 +219,22 @@ Business Analyst | SQL | Data Analytics
 
 🎯 About This Portfolio
 
-My hands-on journey...
+---
+
+## 📌 Portfolio Status
+
+| Topic | Status |
+|---|---|
+| SQL Server Introduction | ✅ Completed |
+| Data Types | ✅ Completed |
+| DDL | ✅ Completed |
+| DML | 🔄 In Progress |
+| Operators | ⏳ Upcoming |
+| Functions | ⏳ Upcoming |
+| Joins | ⏳ Upcoming |
+| Subqueries | ⏳ Upcoming |
+| CTE | ⏳ Upcoming |
+| Ranking Functions | ⏳ Upcoming |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
