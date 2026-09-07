@@ -127,3 +127,44 @@ The exercise covers:
 - Adding a new column using `ADD`
 
 ![ALTER TABLE Execution](DDL_ALTER_TABLE_SUCCESS.PNG)
+
+---
+
+## 📸 SQL Server Execution Evidence
+
+### CREATE TABLE
+
+The screenshot below demonstrates the successful creation of the Employee table in Microsoft SQL Server.
+
+![CREATE TABLE Execution](DDL_CREATE_TABLE_EXECUTION.PNG)
+
+---
+
+### ALTER TABLE
+
+The screenshot below demonstrates the successful modification of the Employee table using ALTER TABLE.
+
+The exercise covers:
+
+- Modifying an existing column using ALTER COLUMN
+- Adding a new column using ADD
+
+![ALTER TABLE Execution](DDL_ALTER_TABLE_EXECUTION.PNG)
+
+---
+
+## 🎯 Business Learning
+
+This exercise helped me understand how database structures can be created and modified based on changing business requirements.
+
+### Example
+
+**Business Requirement:**
+
+HR wants to capture additional employee information.
+
+**SQL Solution:**
+
+```sql
+ALTER TABLE EMPLOYEES
+ADD DESIGNATION VARCHAR(25);
