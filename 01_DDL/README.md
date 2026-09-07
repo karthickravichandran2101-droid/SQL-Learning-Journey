@@ -4,42 +4,46 @@
 
 This project demonstrates my practical understanding of SQL Data Definition Language (DDL) using an Employee Management business scenario.
 
-DDL commands are used to create, modify and remove the structure of database objects.
+The objective is to understand how database structures are created, modified and removed using Microsoft SQL Server.
+
 ---
+
 ## 🏢 Business Scenario
 
-A company wants to create an Employee Management database to maintain employee information.
+A company wants to maintain employee information in a structured database.
+
 The HR department needs to store:
 
-- Employee ID
-- Employee Name
-- Department
-- Designation
-- Salary
-- Joining Date
+| Field | Business Purpose |
+|---|---|
+| EMP_ID | Unique employee identifier |
+| EMP_NAME | Employee name |
+| DEPARTMENT | Employee department |
+| DESIGNATION | Employee job role |
+| SALARY | Employee salary |
+| JOINING_DATE | Employee joining date |
+
 ---
 
 ## 🎯 Business Requirement
 
-The organization needs a structured employee table that can be created and modified based on changing HR requirements.
+The organization needs an Employee table that can be:
 
-The database should allow the HR team to:
-
-1. Create the employee table
-2. Modify the table structure
-3. Remove all records when required
-4. Remove the table when it is no longer required
+1. Created when the system is introduced
+2. Modified when business requirements change
+3. Cleared when temporary data needs to be removed
+4. Deleted when the table is no longer required
 
 ---
 
 ## 📚 DDL Commands Covered
 
-| Command | Purpose |
-|---|---|
-| CREATE | Creates a database object |
-| ALTER | Modifies an existing database object |
-| TRUNCATE | Removes all records while keeping the table structure |
-| DROP | Removes the database object |
+| Command | Purpose | Business Example |
+|---|---|---|
+| CREATE | Creates a database object | Create Employee table |
+| ALTER | Modifies an existing object | Add employee email |
+| TRUNCATE | Removes all records | Clear temporary employee data |
+| DROP | Removes a database object | Remove obsolete table |
 
 ---
 
@@ -52,44 +56,54 @@ The database should allow the HR team to:
 
 ---
 
-## 📂 SQL Files
+## 📂 Project Files
 
 | File | Description |
 |---|---|
-| `01_CREATE.sql` | Create database and employee table |
-| `02_ALTER.sql` | Modify employee table structure |
-| `03_TRUNCATE.sql` | Remove all records from table |
-| `04_DROP.sql` | Remove employee table |
+| `01_CREATE.sql` | Creates database and Employee table |
+| `02_ALTER.sql` | Modifies Employee table |
+| `03_TRUNCATE.sql` | Removes all records |
+| `04_DROP.sql` | Removes Employee table |
 
 ---
 
-## 💡 Skills Demonstrated
+## 💻 SQL Concepts Demonstrated
 
-- SQL DDL
+- CREATE DATABASE
 - CREATE TABLE
 - ALTER TABLE
 - TRUNCATE TABLE
 - DROP TABLE
-- SQL Server
-- Database structure management
-- Business requirement understanding
+- SQL Data Types
+- Database Object Management
 
 ---
 
-## 📈 Learning Outcome
+## 💡 Key Learning
 
-Through this project, I learned how SQL DDL commands are used to create and manage database structures in Microsoft SQL Server.
+Through this project, I learned how DDL commands are used to manage the structure and lifecycle of database objects in Microsoft SQL Server.
+
+I also learned how technical SQL concepts can be connected to real-world business requirements.
 
 ---
 
-## 🚀 Next Learning Topics
+## 🎤 Interview Questions Practiced
 
-- DML
-- Operators
-- Functions
-- Aggregate Functions
-- GROUP BY
-- Joins
-- Subqueries
-- CTE
-- Ranking Functions
+1. What is DDL?
+2. What is the difference between DELETE and TRUNCATE?
+3. What is the difference between DROP and TRUNCATE?
+4. What is the purpose of ALTER TABLE?
+5. What happens when a table is dropped?
+6. What is the difference between CREATE TABLE and ALTER TABLE?
+
+---
+
+## 🚀 Next Topic
+
+**DML - Data Manipulation Language**
+
+Topics:
+
+- INSERT
+- UPDATE
+- DELETE
