@@ -107,3 +107,11 @@ Topics:
 - INSERT
 - UPDATE
 - DELETE
+---
+
+## 📸 SQL Execution Evidence
+
+The following screenshot shows the successful execution of the Employee table creation and the resulting table structure in Microsoft SQL Server.
+
+![DDL CREATE TABLE Execution](DDL_CREATE_TABLE_EXECUTION.png)
+
