@@ -128,3 +128,17 @@ Example:
 UPDATE Customers
 SET City = 'Chennai'
 WHERE CustomerID = 101;
+
+## 🔄 DDL vs DML
+
+| Feature | DDL | DML |
+|---|---|---|
+| Full Form | Data Definition Language | Data Manipulation Language |
+| Main Purpose | Manage database structure | Manage data |
+| CREATE | ✅ | ❌ |
+| ALTER | ✅ | ❌ |
+| DROP | ✅ | ❌ |
+| TRUNCATE | ✅ | ❌ |
+| INSERT | ❌ | ✅ |
+| UPDATE | ❌ | ✅ |
+| DELETE | ❌ | ✅ |
