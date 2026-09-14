@@ -1,52 +1,13 @@
-# ➕ Operators – Arithmetic Operators
+## 📸 Execution Evidence
 
-## 📌 Project Overview
+The following screenshots provide execution evidence from SQL Server Management Studio.
 
-This project demonstrates the use of Arithmetic Operators in Microsoft SQL Server.
-
-Arithmetic operators are used to perform mathematical calculations on numerical data and are commonly used in business reporting, financial analysis, sales calculations, payroll processing, and operational analysis.
-
-This project focuses on practical business scenarios rather than isolated mathematical examples.
-
----
-
-## 🎯 Business Scenario
-
-An organization wants to analyze employee and sales-related data using SQL calculations.
-
-The business team requires SQL queries to calculate:
-
-- Total compensation
-- Salary deductions
-- Average values
-- Sales amounts
-- Quantity-based calculations
-- Even and odd identification
-
-Arithmetic operators can help convert raw database values into meaningful business information.
-
----
-
-## 💼 Business Requirements
-
-| # | Business Requirement | SQL Operator |
+| Operator | Business Calculation | Execution Evidence |
 |---|---|---|
-| 1 | Calculate total compensation by adding salary and bonus | `+` |
-| 2 | Calculate salary after deduction | `-` |
-| 3 | Calculate average value or unit price | `/` |
-| 4 | Calculate total sales amount | `*` |
-| 5 | Identify remainder/even-odd values | `%` |
+| Addition (+) | Salary + Bonus = Total Compensation | [View Result](./Execution_Evidence/01_Addition_Result.PNG) |
+| Subtraction (-) | Salary - Deduction = Net Salary | [View Result](./Execution_Evidence/02_Subtraction_Result.PNG) |
+| Division (/) | Sales Amount / Quantity = Unit Price | [View Result](./Execution_Evidence/03_Division_Result.PNG) |
+| Multiplication (*) | Quantity × Unit Price = Total Sales | [View Result](./Execution_Evidence/04_Multiplication_Result.PNG) |
+| Modulus (%) | Quantity % 10 = Remaining Units | [View Result](./Execution_Evidence/05_Modulus_Result.PNG) |
 
----
-
-## 📚 Arithmetic Operators Covered
-
-### 1. Addition (+)
-
-Used to add two numerical values.
-
-Example:
-
-```sql
-SELECT SALARY + BONUS AS TOTAL_COMPENSATION
-FROM EMPLOYEES;
+> All examples were executed and validated using Microsoft SQL Server Management Studio (SSMS).
