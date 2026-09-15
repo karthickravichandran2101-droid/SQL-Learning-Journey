@@ -1,14 +1,23 @@
--- =========================================================
--- SQL OPERATORS
--- Topic: Comparison Operators
--- Operator: Equal To (=)
--- Database: MS SQL Server
--- =========================================================
+/*
+=========================================================
+PROJECT: SQL Learning Portfolio
+TOPIC: Operators - Comparison Operators
+SCENARIO: Equal To (=)
+=========================================================
+
+BUSINESS REQUIREMENT:
+HR needs to check whether an employee's salary
+is equal to a specific salary amount.
+*/
 
 
--- Example 1:
--- Find products where Unit_Price is exactly 1500
+-- Sample data using variables
 
-SELECT *
-FROM Products
-WHERE Unit_Price = 1500;
+DECLARE @Salary DECIMAL(10,2) = 50000;
+
+
+-- Equal To (=)
+
+SELECT
+    @Salary AS Salary
+WHERE @Salary = 50000;
