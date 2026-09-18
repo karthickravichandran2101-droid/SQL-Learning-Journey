@@ -1,65 +1,12 @@
-# 🧠 Operators – Logical Operators
+## 📸 Execution Evidence
 
-## 📌 Project Overview
+The following SQL queries were executed and validated
+using Microsoft SQL Server Management Studio (SSMS).
 
-This project demonstrates the use of Logical Operators
-in Microsoft SQL Server.
+| # | Logical Operator | Business Requirement | SQL Script | Execution Evidence |
+|---|---|---|---|---|
+| 1 | `AND` | Find Electronics products with sales greater than ₹100,000 | [View SQL](./01_AND.sql) | [View Result](./Execution_Evidence/01_AND_Result.PNG) |
+| 2 | `OR` | Find products belonging to Electronics or Office | [View SQL](./02_OR.sql) | [View Result](./Execution_Evidence/02_OR_Result.PNG) |
+| 3 | `NOT` | Find products that do not belong to Electronics | [View SQL](./03_NOT.sql) | [View Result](./Execution_Evidence/03_NOT_Result.PNG) |
 
-Logical Operators are used to combine, modify, and
-evaluate conditions when filtering business data.
-
-This project focuses on:
-
-- AND
-- OR
-- NOT
-
-The examples use a practical sales dataset to demonstrate
-how business requirements can be translated into SQL
-conditions.
-
----
-
-## 🎯 Business Scenario
-
-The Sales Management team needs to analyze sales data
-using multiple business conditions.
-
-The business requires SQL queries to:
-
-- Identify products satisfying multiple conditions
-- Identify products satisfying at least one condition
-- Exclude specific categories from analysis
-
-Logical Operators help combine and modify conditions
-to answer these business questions.
-
----
-
-## 💼 Business Requirements
-
-| # | Business Requirement | Logical Operator |
-|---|---|---|
-| 1 | Find Electronics products with sales greater than ₹100,000 | `AND` |
-| 2 | Find Electronics or Office products | `OR` |
-| 3 | Find products that are not Electronics | `NOT` |
-
----
-
-## 📚 Logical Operators Covered
-
-| Operator | Meaning | Example |
-|---|---|---|
-| `AND` | All conditions must be TRUE | `A AND B` |
-| `OR` | At least one condition must be TRUE | `A OR B` |
-| `NOT` | Reverses a condition | `NOT A` |
-
----
-
-## 🔍 Practical Examples
-
-### AND
-
-```sql
-WHERE CATEGORY = 'Electronics'
-AND SALES_AMOUNT > 100000
+> Each result screenshot provides execution evidence from SQL Server Management Studio.
