@@ -41,37 +41,11 @@ SELECT
     Doctor_ID,
     Doctor_Name,
     Specialization,
-    Department_ID
+    
 FROM Doctor;
-
 
 -- =====================================================
 -- BUSINESS REQUIREMENT 4
--- Display available hospital departments
--- =====================================================
-
-SELECT
-    Department_ID,
-    Department_Name
-FROM Department;
-
-
--- =====================================================
--- BUSINESS REQUIREMENT 5
--- Display medicine master information
--- =====================================================
-
-SELECT
-    Medicine_ID,
-    Medicine_Name,
-    Category,
-    Unit_Price,
-    Stock_Quantity
-FROM Medicine;
-
-
--- =====================================================
--- BUSINESS REQUIREMENT 6
 -- Display hospital bills
 -- =====================================================
 
