@@ -1,61 +1,15 @@
-📊 SQL Comparison Operators
-📌 Project Overview
-This project demonstrates the use of Comparison Operators in Microsoft SQL Server.
+## 📸 Execution Evidence
 
-Comparison Operators are used to compare values and filter records based on specified conditions.
+The following SQL queries were executed and validated
+using Microsoft SQL Server Management Studio (SSMS).
 
-This project uses a sales dataset called SALES_COMPARISON to demonstrate six commonly used comparison operators.
+| # | Comparison Operator | Business Requirement | SQL Script | Execution Evidence |
+|---|---|---|---|---|
+| 1 | `=` Equals To | Find Electronics products | [View SQL](./01_Equals_To.sql) | [View Result](./Execution_Evidence/01_Equals_To_Result.PNG) |
+| 2 | `<>` Not Equals To | Exclude Electronics products | [View SQL](./02_Not_Equals_To.sql) | [View Result](./Execution_Evidence/02_Not_Equals_To_Result.PNG) |
+| 3 | `>` Greater Than | Find sales greater than ₹100,000 | [View SQL](./03_Greater_Than.sql) | [View Result](./Execution_Evidence/03_Greater_Than_Result.PNG) |
+| 4 | `<` Less Than | Find sales less than ₹100,000 | [View SQL](./04_Less_Than.sql) | [View Result](./Execution_Evidence/04_Less_Than_Result.PNG) |
+| 5 | `>=` Greater Than or Equal To | Find sales of ₹100,000 or more | [View SQL](./05_Greater_Than_or_Equal.sql) | [View Result](./Execution_Evidence/05_Greater_Than_or_Equal_Result.PNG) |
+| 6 | `<=` Less Than or Equal To | Find sales of ₹100,000 or less | [View SQL](./06_Less_Than_or_Equal.sql) | [View Result](./Execution_Evidence/06_Less_Than_or_Equal_Result.PNG) |
 
-🎯 Business Scenario
-The Sales team wants to analyze product sales data by comparing quantities, unit prices, categories, and total sales.
-
-Comparison Operators can help the team answer questions such as:
-
-Which products have a specific unit price?
-Which products do not belong to a particular category?
-Which products generated sales above a certain amount?
-Which products have quantities below a specific level?
-Which products meet a minimum price?
-Which products are within a maximum sales value?
-🎯 Learning Objectives
-Through this project, I practiced:
-
-Using Comparison Operators in SQL Server
-Filtering data using the WHERE clause
-Comparing numeric values
-Comparing text values
-Understanding equality and inequality
-Applying comparison operators to business data
-🔹 Comparison Operators Covered
-Operator	Name	Purpose
-=	Equal To	Checks whether two values are equal
-<>	Not Equal To	Checks whether two values are different
->	Greater Than	Checks whether one value is greater
-<	Less Than	Checks whether one value is smaller
->=	Greater Than or Equal To	Checks whether a value is greater than or equal
-<=	Less Than or Equal To	Checks whether a value is less than or equal
-🗃️ Sample Dataset
-The project uses the SALES_COMPARISON table.
-
-Product_ID	Product_Name	Category	Quantity	Unit_Price	Total_Sales
-1	Laptop	Electronics	5	50000	250000
-2	Mouse	Accessories	20	1000	20000
-3	Keyboard	Accessories	15	2000	30000
-4	Monitor	Electronics	8	15000	120000
-5	Printer	Office	3	25000	75000
-6	Tablet	Electronics	10	20000	200000
-💻 Comparison Operator Examples
-1. Equal To (=)
-Business Question:
-
-Which product has a Unit Price exactly equal to ₹2,000?
-
-SELECT
-    Product_ID,
-    Product_Name,
-    Category,
-    Quantity,
-    Unit_Price,
-    Total_Sales
-FROM SALES_COMPARISON
-WHERE Unit_Price = 2000;
+> Each result screenshot provides execution evidence from SQL Server Management Studio.
