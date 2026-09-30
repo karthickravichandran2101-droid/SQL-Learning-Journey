@@ -124,3 +124,5 @@ Validate Result
 Capture Execution Evidence
         ↓
 Document in GitHub
+
+[View Result](./Execution_Evidence/02_UNION_ALL_Result.PNG)
