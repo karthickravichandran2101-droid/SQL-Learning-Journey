@@ -41,37 +41,60 @@ This project uses an Employee HR dataset containing:
 - Manager ID
 - City
 
-📄 Dataset script will be added during project development.
+📄 [View Dataset Script](./00_Special_Operators_Dataset.sql)
 
 ---
 
-## 📊 Portfolio Evidence
+# 1️⃣ IN
 
-Each operator will follow:
+## 🎯 Business Requirement
 
-**Business Requirement → SQL Query → SSMS Execution → Result Validation → Screenshot → GitHub Documentation**
+HR wants to identify employees who belong to either the **IT or Finance** department.
 
----
+### SQL Concept
 
-## 🛠️ Tools Used
+`IN` allows multiple possible values to be specified in a single condition.
 
-- Microsoft SQL Server
-- SQL Server Management Studio (SSMS)
-- T-SQL
-- GitHub
+📄 [View IN SQL](./01_IN.sql)
 
----
+### Business Outcome
 
-## 📈 Learning Approach
+The query identifies employees belonging to:
 
-> **Learn → Practice → Execute → Validate → Document → Improve**
+- IT
+- Finance
 
 ---
 
-## 👨‍💻 Portfolio Owner
+# 2️⃣ BETWEEN ... AND
 
-**Karthick Ravichandran**
+## 🎯 Business Requirement
 
-> **1% Better Than Yesterday**
+HR wants to identify employees whose salary is between **₹60,000 and ₹90,000**.
 
-> **Keep Learning. Keep Growing.**
+### SQL Concept
+
+`BETWEEN ... AND` filters values within a specified range.
+
+Both boundary values are included.
+
+📄 [View BETWEEN AND SQL](./02_BETWEEN_AND.sql)
+
+### Business Outcome
+
+The query identifies employees whose salary falls within the specified salary band.
+
+---
+
+# 3️⃣ LIKE
+
+## 🎯 Business Requirement
+
+HR wants to identify employees whose names start with the letter **A**.
+
+### SQL Concept
+
+`LIKE` is used to search for a specified pattern in character data.
+
+```sql
+WHERE EMPLOYEE_NAME LIKE 'A%'
