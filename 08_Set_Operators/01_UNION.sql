@@ -1,36 +1,34 @@
 /*
-====================================================
+==========================================================
 PROJECT: SQL Learning Portfolio
 TOPIC: Set Operators
-SCENARIO: UNION
-====================================================
+OPERATOR: UNION
+SCENARIO: Customer Channel Analysis
+==========================================================
 
 BUSINESS REQUIREMENT:
 
-The Sales Manager wants to create a combined list
-of products belonging to the Electronics and Office
-categories.
+The Sales Manager wants to create a single customer
+list containing customers from both Online and Store
+channels.
 
-The final result should contain each matching record
-only once.
+If a customer appears in both channels, the customer
+should appear only once.
 
-UNION is used to combine the result sets of two
-SELECT statements and remove duplicate rows.
-====================================================
+UNION removes duplicate records from the combined result.
+==========================================================
 */
 
 SELECT
-    SALE_ID,
-    PRODUCT_NAME,
-    CATEGORY
-FROM SALES_COMPARISON
-WHERE CATEGORY = 'Electronics'
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    CITY
+FROM ONLINE_CUSTOMERS
 
 UNION
 
 SELECT
-    SALE_ID,
-    PRODUCT_NAME,
-    CATEGORY
-FROM SALES_COMPARISON
-WHERE CATEGORY = 'Office';
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    CITY
+FROM STORE_CUSTOMERS;
