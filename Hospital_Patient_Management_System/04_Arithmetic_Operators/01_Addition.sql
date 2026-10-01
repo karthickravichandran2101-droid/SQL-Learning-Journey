@@ -1,45 +1,25 @@
-
 /*
 ===========================================================
-PROJECT   : Hospital Patient Management System
-MODULE    : Arithmetic Operators
-TOPIC     : 01 - Addition (+)
-DATABASE  : PRJ_Hospital_Patient_Management
-
-BUSINESS AREA:
-Hospital Billing and Finance
+BUSINESS SCENARIO 01:
+CALCULATE TOTAL PATIENT BILL
 
 BUSINESS REQUIREMENT:
-Calculate the total patient bill by adding Consultation,
-Laboratory and Medicine charges.
+The Finance Department wants to calculate the total
+charges for every patient by combining three billing
+components.
+
+BUSINESS FORMULA:
+Consultation + Lab + Medicine = Total Bill
 
 ===========================================================
 */
 
-
--- =========================================================
--- 1. BASIC ADDITION
--- =========================================================
-
--- Requirement:
--- Add two numeric values.
-
-SELECT
-    500 + 1500 AS Total_Amount;
-
-
--- =========================================================
--- 2. HOSPITAL BUSINESS SCENARIO
---    CALCULATE TOTAL PATIENT BILL
--- =========================================================
-
--- Requirement:
--- Calculate the total bill for every patient by adding
--- Consultation, Lab and Medicine charges.
-
 SELECT
     Bill_ID,
     Patient_ID,
+    Visit_ID,
+    Bill_Date,
+
     Consultation_Amount,
     Lab_Amount,
     Medicine_Amount,
@@ -50,15 +30,17 @@ SELECT
 
 FROM dbo.Bill;
 
+/*
+===========================================================
+BUSINESS SCENARIO 02:
+VALIDATE STORED AND CALCULATED BILL AMOUNTS
 
--- =========================================================
--- 3. BUSINESS SCENARIO
---    COMPARE STORED AND CALCULATED BILL AMOUNT
--- =========================================================
+BUSINESS REQUIREMENT:
+Compare the existing Total_Amount with the newly
+calculated total to identify possible discrepancies.
 
--- Requirement:
--- Compare the stored total with the calculated total
--- to identify possible billing discrepancies.
+===========================================================
+*/
 
 SELECT
     Bill_ID,
@@ -76,37 +58,38 @@ SELECT
 
 FROM dbo.Bill;
 
-
--- =========================================================
--- 4. BUSINESS SCENARIO
---    CALCULATE TOTAL HOSPITAL BILLING
--- =========================================================
-
--- Requirement:
--- Calculate the total billing value across all records.
-
-SELECT
-    SUM(Consultation_Amount)
-        + SUM(Lab_Amount)
-        + SUM(Medicine_Amount) AS Total_Hospital_Billing
-
-FROM dbo.Bill;
-
-
 /*
 ===========================================================
-BUSINESS INSIGHTS
+BUSINESS SCENARIO 03:
+DAILY HOSPITAL BILLING SUMMARY
 
-1. Addition combines multiple hospital billing components.
-
-2. Calculated totals can be compared with stored bill totals.
-
-3. Aggregate calculations help generate hospital-level
-   financial summaries.
-
-NOTE:
-NULL values require appropriate handling. We will study
-NULL handling separately under Special Operators.
+BUSINESS REQUIREMENT:
+Calculate daily billing by combining all three
+billing components for each billing date.
 
 ===========================================================
 */
+
+SELECT
+    Bill_Date,
+
+    SUM(COALESCE(Consultation_Amount, 0))
+        AS Total_Consultation,
+
+    SUM(COALESCE(Lab_Amount, 0))
+        AS Total_Lab,
+
+    SUM(COALESCE(Medicine_Amount, 0))
+        AS Total_Medicine,
+
+    SUM(
+        COALESCE(Consultation_Amount, 0)
+        + COALESCE(Lab_Amount, 0)
+        + COALESCE(Medicine_Amount, 0)
+    ) AS Daily_Total_Billing
+
+FROM dbo.Bill
+
+GROUP BY Bill_Date
+
+ORDER BY Bill_Date;
