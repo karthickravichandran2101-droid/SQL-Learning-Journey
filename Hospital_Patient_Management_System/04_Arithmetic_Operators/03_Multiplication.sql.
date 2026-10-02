@@ -24,3 +24,29 @@ SELECT
     Unit_Price * Stock_Quantity AS Total_Stock_Value
 
 FROM dbo.Medicine;
+
+/*
+===========================================================
+BUSINESS SCENARIO 02:
+CALCULATE ESTIMATED MEDICINE PURCHASE COST
+
+BUSINESS REQUIREMENT:
+Calculate the purchase cost for 50 additional units
+of each medicine.
+
+BUSINESS FORMULA:
+Unit Price * Purchase Quantity = Purchase Cost
+
+===========================================================
+*/
+
+SELECT
+    Medicine_ID,
+    Medicine_Name,
+    Unit_Price,
+
+    50 AS Purchase_Quantity,
+
+    Unit_Price * 50 AS Estimated_Purchase_Cost
+
+FROM dbo.Medicine;
