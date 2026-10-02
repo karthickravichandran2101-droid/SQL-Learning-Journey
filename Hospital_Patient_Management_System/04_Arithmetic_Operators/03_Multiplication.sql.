@@ -50,3 +50,27 @@ SELECT
     Unit_Price * 50 AS Estimated_Purchase_Cost
 
 FROM dbo.Medicine;
+
+
+/*
+===========================================================
+BUSINESS SCENARIO 03:
+CALCULATE MEDICINE INVENTORY VALUE
+
+BUSINESS REQUIREMENT:
+Calculate the total stock value of each medicine.
+
+===========================================================
+*/
+
+SELECT
+    Medicine_ID,
+    Medicine_Name,
+    Category,
+    Unit_Price,
+    Stock_Quantity,
+
+    Unit_Price * Stock_Quantity AS Total_Stock_Value
+
+FROM dbo.Medicine;
+
