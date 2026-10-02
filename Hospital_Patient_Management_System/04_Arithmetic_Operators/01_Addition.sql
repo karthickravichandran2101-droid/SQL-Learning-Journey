@@ -58,38 +58,3 @@ SELECT
 
 FROM dbo.Bill;
 
-/*
-===========================================================
-BUSINESS SCENARIO 03:
-DAILY HOSPITAL BILLING SUMMARY
-
-BUSINESS REQUIREMENT:
-Calculate daily billing by combining all three
-billing components for each billing date.
-
-===========================================================
-*/
-
-SELECT
-    Bill_Date,
-
-    SUM(COALESCE(Consultation_Amount, 0))
-        AS Total_Consultation,
-
-    SUM(COALESCE(Lab_Amount, 0))
-        AS Total_Lab,
-
-    SUM(COALESCE(Medicine_Amount, 0))
-        AS Total_Medicine,
-
-    SUM(
-        COALESCE(Consultation_Amount, 0)
-        + COALESCE(Lab_Amount, 0)
-        + COALESCE(Medicine_Amount, 0)
-    ) AS Daily_Total_Billing
-
-FROM dbo.Bill
-
-GROUP BY Bill_Date
-
-ORDER BY Bill_Date;
