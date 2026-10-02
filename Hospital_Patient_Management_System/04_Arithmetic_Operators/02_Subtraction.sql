@@ -7,15 +7,15 @@ TOPIC     : 02 - Subtraction (-)
 DATABASE  : PRJ_Hospital_Patient_Management
 
 BUSINESS AREA:
-Hospital Finance and Payment Management
+Hospital Patient Registration
 
 BUSINESS REQUIREMENT:
-The Hospital Finance Department wants to calculate
-the outstanding amount for each patient by subtracting
-the amount already paid from the total bill amount.
+Calculate the remaining patient registration capacity
+by subtracting the number of registered patients from
+the total daily registration capacity.
 
 BUSINESS FORMULA:
-Total Bill Amount - Amount Paid = Outstanding Amount
+Total Capacity - Registered Patients = Available Slots
 
 ===========================================================
 */
@@ -26,7 +26,7 @@ Total Bill Amount - Amount Paid = Outstanding Amount
 -- =========================================================
 
 -- Requirement:
--- Subtract one numeric value from another.
+-- Calculate the difference between two numeric values.
 
 SELECT
-    5000 - 3000 AS Outstanding_Amount;
+    100 - 65 AS Available_Registration_Slots;
