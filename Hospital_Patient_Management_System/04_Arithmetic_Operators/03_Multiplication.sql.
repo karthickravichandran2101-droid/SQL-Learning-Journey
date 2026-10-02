@@ -1,28 +1,26 @@
 
 /*
 ===========================================================
-PROJECT   : Hospital Patient Management System
-MODULE    : Arithmetic Operators
-TOPIC     : 03 - Multiplication (*)
-DATABASE  : PRJ_Hospital_Patient_Management
+BUSINESS SCENARIO 01:
+CALCULATE TOTAL MEDICINE INVENTORY VALUE
 
-BUSINESS AREA:
-Hospital Pharmacy and Billing
+BUSINESS REQUIREMENT:
+The Pharmacy Manager wants to calculate the total
+inventory value of each medicine available in stock.
 
-BUSINESS OBJECTIVE:
-Demonstrate how the Multiplication (*) operator
-can be used to calculate hospital operational costs.
+BUSINESS FORMULA:
+Stock Quantity * Unit Price = Stock Value
 
 ===========================================================
 */
 
-
--- =========================================================
--- 1. BASIC MULTIPLICATION
--- =========================================================
-
--- BUSINESS REQUIREMENT:
--- Calculate the total cost of medicine purchased.
-
 SELECT
-    5 * 100 AS Total_Medicine_Cost;
+    Medicine_ID,
+    Medicine_Name,
+    Category,
+    Unit_Price,
+    Stock_Quantity,
+
+    Unit_Price * Stock_Quantity AS Total_Stock_Value
+
+FROM dbo.Medicine;
