@@ -142,7 +142,55 @@ SELECT
 
 Refer to the Evidence folder for SQL Server Management Studio execution screenshots.
 
----
+
+# 03 — Multiplication Operator (*)
+
+## Project
+Hospital Patient Management System
+
+## Business Area
+Hospital Pharmacy and Inventory Management
+
+## Business Requirement
+
+The Pharmacy Manager wants to calculate the total inventory value of each medicine by multiplying the unit price by the available stock quantity.
+
+## Database Table
+`dbo.Medicine`
+
+## Dataset Preparation
+
+Created 10 sample medicine records using SQL INSERT statements.
+
+## Business Scenario 01: Medicine Inventory Valuation
+
+**Formula:** Unit Price × Stock Quantity
+
+**SQL Concept:** Multiplication (`*`)
+
+**Business Outcome:** Calculate the stock value of each medicine.
+
+## Business Scenario 02: Additional Medicine Purchase Cost
+
+**Requirement:** Calculate the estimated cost of purchasing 50 additional units of each medicine.
+
+**Formula:** Unit Price × Purchase Quantity
+
+**Business Outcome:** Help the purchasing department estimate medicine procurement costs.
+
+## Learning Outcomes
+
+- Understand the SQL Multiplication operator.
+- Insert sample medicine records.
+- Retrieve records from a database table.
+- Perform multiplication using table columns.
+- Create calculated columns using aliases.
+- Translate pharmacy requirements into SQL solutions.
+
+## Evidence
+
+Refer to the Evidence folder for SSMS execution screenshots.
+
 
 **Personal Brand:** 1% Better Than Yesterday  
 **Created by:** Karthick Ravichandran
