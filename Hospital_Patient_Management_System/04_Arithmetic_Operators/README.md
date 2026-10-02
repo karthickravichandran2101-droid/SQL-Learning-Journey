@@ -78,6 +78,75 @@ WHAT → WHY → WHEN → HOW → BUSINESS REQUIREMENT → SQL SOLUTION → RESU
 
 ## 🚀 Project Vision
 
+# 02 — Subtraction Operator (-)
+
+## Project
+Hospital Patient Management System
+
+## Business Area
+Hospital Operations and Patient Capacity Management
+
+## Business Requirement
+The hospital administration wants to calculate the remaining patient registration capacity by subtracting the number of registered patients from the total daily registration capacity.
+
+## Business Scenario 1: Available Registration Slots
+
+**Business Formula:**
+
+Available Slots = Total Capacity - Registered Patients
+
+**SQL Query:**
+
+```sql
+SELECT
+    100 - 65 AS Available_Registration_Slots;
+```
+
+**Expected Output:**
+
+| Available Registration Slots |
+|---:|
+| 35 |
+
+## Business Scenario 2: Available Hospital Beds
+
+**Business Requirement:** Calculate the number of available beds after considering occupied beds.
+
+**SQL Query:**
+
+```sql
+SELECT
+    150 - 120 AS Available_Beds;
+```
+
+**Expected Output:**
+
+| Available Beds |
+|---:|
+| 30 |
+
+## Business Insights
+
+- Monitor hospital registration capacity.
+- Identify available hospital beds.
+- Understand how arithmetic operators support operational reporting.
+
+## Learning Outcomes
+
+- Understand the Subtraction operator (-).
+- Write basic SQL arithmetic expressions.
+- Assign meaningful column aliases.
+- Translate hospital business requirements into SQL queries.
+
+## Evidence
+
+Refer to the Evidence folder for SQL Server Management Studio execution screenshots.
+
+---
+
+**Personal Brand:** 1% Better Than Yesterday  
+**Created by:** Karthick Ravichandran
+
 To demonstrate how SQL concepts can solve real-world hospital business problems and support data-driven decision-making.
 
 **1% Better Than Yesterday | Keep Learning, Keep Growing**
