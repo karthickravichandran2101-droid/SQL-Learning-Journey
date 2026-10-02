@@ -1,0 +1,28 @@
+
+/*
+===========================================================
+PROJECT   : Hospital Patient Management System
+MODULE    : Arithmetic Operators
+TOPIC     : 03 - Multiplication (*)
+DATABASE  : PRJ_Hospital_Patient_Management
+
+BUSINESS AREA:
+Hospital Pharmacy and Billing
+
+BUSINESS OBJECTIVE:
+Demonstrate how the Multiplication (*) operator
+can be used to calculate hospital operational costs.
+
+===========================================================
+*/
+
+
+-- =========================================================
+-- 1. BASIC MULTIPLICATION
+-- =========================================================
+
+-- BUSINESS REQUIREMENT:
+-- Calculate the total cost of medicine purchased.
+
+SELECT
+    5 * 100 AS Total_Medicine_Cost;
