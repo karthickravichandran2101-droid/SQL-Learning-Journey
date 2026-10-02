@@ -1,1 +1,188 @@
-Read ME
+# 🏥 Hospital Patient Management System
+
+## SQL SET Operators – Real-World Business Scenarios
+
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red)
+![SQL](https://img.shields.io/badge/SQL-SET%20Operators-blue)
+![Project](https://img.shields.io/badge/Project-Hospital%20Management-green)
+![Learning](https://img.shields.io/badge/Learning-Hands--On-orange)
+
+---
+
+## 📌 1. Project Overview
+
+This module demonstrates the practical application of **SQL SET Operators** using the Hospital Patient Management System developed in Microsoft SQL Server.
+
+SET Operators are used to combine or compare the results of two or more SELECT statements and retrieve meaningful information from database tables.
+
+### 🎯 Learning Objectives
+
+- Understand the purpose of SQL SET Operators.
+- Combine query results using UNION and UNION ALL.
+- Identify common records using INTERSECT.
+- Identify differences between query results using EXCEPT.
+- Understand duplicate handling in SQL SET Operators.
+- Apply SET Operators to real-world hospital business scenarios.
+
+---
+
+## 🏥 2. Types of SQL SET Operators
+
+SQL Server supports four major SET Operators:
+
+| Operator | Purpose |
+|---|---|
+| UNION | Combines results and removes duplicate rows. |
+| UNION ALL | Combines results and retains duplicate rows. |
+| INTERSECT | Returns common rows from both results. |
+| EXCEPT | Returns rows from the first result that are absent from the second. |
+
+---
+
+## 💻 3. SQL Scripts and Business Scenarios
+
+### 01. UNION Operator
+
+**Business Scenario:** Consolidated Patient Identification.
+
+**Business Requirement:** Retrieve patients registered in Bengaluru and all female patients in one consolidated list.
+
+**Business Objective:** Combine both result sets and eliminate duplicate rows.
+
+**SQL Script:** [01_UNION.sql](./01_UNION.sql)
+
+**Execution Evidence:**
+
+![UNION Result](./Execution_Evidence/Union.PNG)
+
+---
+
+### 02. UNION ALL Operator
+
+**Business Scenario:** Patient List Consolidation.
+
+**Business Requirement:** Combine Bengaluru patients and all female patients while retaining duplicate records.
+
+**Business Objective:** Preserve all records from both SELECT statements.
+
+**SQL Script:** [02_UNION_ALL.sql](./02_UNION_ALL.sql)
+
+**Execution Evidence:**
+
+![UNION ALL Result](./Execution_Evidence/Union_All.PNG)
+
+---
+
+### 03. INTERSECT Operator
+
+**Business Scenario:** Common Patient Identification.
+
+**Business Requirement:** Identify patients who are registered in Bengaluru and are female.
+
+**Business Objective:** Retrieve only the common patient records satisfying both result-set conditions.
+
+**SQL Script:** [03_INTERSECT.sql](./03_INTERSECT.sql)
+
+**Execution Evidence:**
+
+![INTERSECT Result](./Execution_Evidence/Intersect.PNG)
+
+---
+
+### 04. EXCEPT Operator
+
+**Business Scenario:** Patient List Difference.
+
+**Business Requirement:** Identify patients registered in Bengaluru who are not included in the female patient list.
+
+**Business Objective:** Retrieve records from the first SELECT statement that do not exist in the second SELECT statement.
+
+**SQL Script:** [04_EXCEPT.sql](./04_EXCEPT.sql)
+
+**Execution Evidence:**
+
+![EXCEPT Result](./Execution_Evidence/Except.PNG)
+
+---
+
+## 📂 4. Project Folder Structure
+
+```text
+07_Set_Operators/
+│
+├── Execution_Evidence/
+│   ├── Union.PNG
+│   ├── Union_All.PNG
+│   ├── Intersect.PNG
+│   └── Except.PNG
+│
+├── 01_UNION.sql
+├── 02_UNION_ALL.sql
+├── 03_INTERSECT.sql
+├── 04_EXCEPT.sql
+└── README.md
+```
+
+---
+
+## 📚 5. Comparison of SET Operators
+
+| Feature | UNION | UNION ALL | INTERSECT | EXCEPT |
+|---|---|---|---|---|
+| Combines results | Yes | Yes | No | No |
+| Finds common rows | No | No | Yes | No |
+| Finds differences | No | No | No | Yes |
+| Removes duplicate rows | Yes | No | Yes | Yes |
+| Retains duplicates | No | Yes | No | No |
+
+### Key Learning Points
+
+**UNION:** Combines both result sets and removes duplicate rows.
+
+**UNION ALL:** Combines both result sets and keeps duplicate rows.
+
+**INTERSECT:** Returns only common rows from both result sets.
+
+**EXCEPT:** Returns rows from the first result set that are missing from the second result set.
+
+**Important SQL Rules:**
+
+1. Both SELECT statements must return the same number of columns.
+2. Corresponding columns must have compatible data types.
+3. Columns must be in the same order.
+4. Column names in the final result are based on the first SELECT statement.
+5. EXCEPT and INTERSECT return distinct rows.
+6. The order of SELECT statements matters when using EXCEPT.
+
+---
+
+## 🛠️ 6. Technology & Tools
+
+- **Database:** PRJ_Hospital_Patient_Management
+- **Tables:** dbo.Patient
+- **Database Platform:** Microsoft SQL Server
+- **Query Tool:** SQL Server Management Studio (SSMS)
+- **Version Control:** GitHub
+
+---
+
+## 🚀 7. Learning Outcomes
+
+After completing this module, learners can:
+
+- Combine results from multiple SELECT statements.
+- Understand the difference between UNION and UNION ALL.
+- Identify common records using INTERSECT.
+- Compare datasets using EXCEPT.
+- Apply SQL SET Operators to practical hospital management scenarios.
+
+---
+
+## 🌱 8. Learning Philosophy
+
+### 1% Better Than Yesterday
+
+**Keep Learning. Keep Growing.**
+
+Every SQL query is another step towards becoming a confident SQL professional.
+
