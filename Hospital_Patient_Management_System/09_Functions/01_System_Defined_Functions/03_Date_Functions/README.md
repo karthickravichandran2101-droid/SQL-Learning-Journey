@@ -1,64 +1,61 @@
 # 🏥 Hospital Patient Management System
-## SQL Server — System-Defined Date Functions
+## SQL Server — Date Functions
 
-![SQL Server](https://img.shields.io/badge/SQL%20Server-T--SQL-red)
-![Project](https://img.shields.io/badge/Project-Hospital%20Management-blue)
-![Module](https://img.shields.io/badge/Module-Date%20Functions-green)
-![Learning](https://img.shields.io/badge/Learning-Project--Based-orange)
+![SQL Server](https://img.shields.io/badge/SQL_Server-T--SQL-red)
+![Module](https://img.shields.io/badge/Module-Date_Functions-blue)
+![Learning](https://img.shields.io/badge/Approach-Project--Based-green)
 
-## 📌 1. Project Overview
+## 1. Project Overview
 
-This module is part of the **Hospital Patient Management System**, developed to learn and demonstrate Microsoft SQL Server date functions through practical, hospital-related business requirements.
+This module demonstrates Microsoft SQL Server date functions through practical business requirements for a Hospital Patient Management System.
 
-Date functions help hospital administrators, receptionists, doctors, billing teams, and reporting analysts manage dates and times associated with patient registrations, appointments, admissions, discharges, follow-ups, and billing.
+Date functions help hospital teams manage patient registrations, appointments, admissions, discharges, follow-ups, and billing periods.
 
-**Objective:** Apply SQL Server date functions to solve practical hospital reporting and operational problems.
+**Objective:** Learn SQL Server date functions and apply them to real-world hospital reporting scenarios.
 
-## 🎯 2. Business Requirements
+## 2. Business Requirements
 
-| Requirement ID | Business Requirement | Expected Outcome |
+| ID | Business Requirement | Expected Outcome |
 |---|---|---|
-| DATE-01 | Capture patient registration date and time | Current registration timestamp |
-| DATE-02 | Capture a high-precision timestamp | Date and time with fractional-second precision |
+| DATE-01 | Capture patient registration date and time | Registration timestamp |
+| DATE-02 | Capture a high-precision timestamp | Timestamp with fractional seconds |
 | DATE-03 | Analyze registration dates | Year, month, and day |
 | DATE-04 | Identify appointment weekdays | Weekday name and number |
-| DATE-05 | Calculate follow-up dates | Follow-up date after a specified interval |
-| DATE-06 | Calculate admission-to-discharge duration | Difference in calendar-day boundaries |
-| DATE-07 | Identify billing month-end | Last date of the billing month |
-| DATE-08 | Construct dates from components | Valid date from year, month, and day |
-| DATE-09 | Validate date text | Check whether an expression is recognized as a date |
-| DATE-10 | Generate monthly admission reports | Admission counts by year and month |
-| DATE-11 | Identify overdue follow-ups | Appointments requiring attention |
-| DATE-12 | Calculate patient age | Age in completed years |
+| DATE-05 | Calculate follow-up dates | Date after a specified interval |
+| DATE-06 | Calculate admission-to-discharge duration | Day boundaries crossed |
+| DATE-07 | Identify billing month-end | Last date of the month |
+| DATE-08 | Construct a date from components | Valid date |
+| DATE-09 | Validate imported date text | Date recognition result |
+| DATE-10 | Summarize monthly admissions | Admission count by month |
+| DATE-11 | Identify overdue follow-ups | Follow-ups requiring attention |
+| DATE-12 | Calculate patient age | Completed years of age |
 
-## 🧠 3. SQL Date Functions Covered
+## 3. Functions Covered
 
-| Function | Purpose | Hospital Use Case |
+| Function | Purpose | Hospital Application |
 |---|---|---|
-| `GETDATE()` | Returns current system date and time | Registration timestamp |
-| `SYSDATETIME()` | Returns a higher-precision current timestamp | Detailed event logging |
-| `YEAR()` | Extracts the year | Annual admission analysis |
-| `MONTH()` | Extracts the month number | Monthly admission reports |
-| `DAY()` | Extracts the day of the month | Registration date analysis |
-| `DATEPART()` | Extracts a specified date component | Weekday and quarter analysis |
-| `DATENAME()` | Returns the name of a date component | Display appointment weekday |
-| `DATEADD()` | Adds a specified interval to a date | Schedule follow-up appointments |
-| `DATEDIFF()` | Counts date-part boundaries crossed | Analyze admission and discharge duration |
-| `EOMONTH()` | Returns the last day of a month | Billing period analysis |
-| `DATEFROMPARTS()` | Constructs a date from year, month, and day | Build reporting dates |
-| `ISDATE()` | Checks whether an expression is recognized as a valid date/time value | Validate imported date text |
+| `GETDATE()` | Current server date and time | Registration timestamp |
+| `SYSDATETIME()` | Higher-precision timestamp | Event logging |
+| `YEAR()` | Extract year | Annual reporting |
+| `MONTH()` | Extract month number | Monthly reporting |
+| `DAY()` | Extract day of month | Registration analysis |
+| `DATEPART()` | Extract date component | Weekday and quarter |
+| `DATENAME()` | Return component name | Appointment weekday |
+| `DATEADD()` | Add a date interval | Schedule follow-ups |
+| `DATEDIFF()` | Count date-part boundaries | Admission duration |
+| `EOMONTH()` | Return month-end date | Billing period |
+| `DATEFROMPARTS()` | Construct a date | Reporting dates |
+| `ISDATE()` | Check date recognition | Imported text validation |
 
-## 🏥 4. Hospital Business Scenarios
+## 4. Practical SQL Examples
 
-### Scenario 1: Patient Registration
-Capture the date and time when a patient registers.
+### 4.1 Capture the Current Timestamp
 
 ```sql
 SELECT GETDATE() AS RegistrationDateTime;
 ```
 
-### Scenario 2: Registration Date Analysis
-Identify the year, month, and day of registration.
+### 4.2 Analyze Registration Dates
 
 ```sql
 SELECT
@@ -68,10 +65,7 @@ SELECT
 FROM PatientRegistrations;
 ```
 
-*Note: `PatientRegistrations` is an illustrative table name. Use your actual table and column names if implementing this query against a permanent table.*
-
-### Scenario 3: Follow-Up Appointment
-Calculate a follow-up date 14 days after admission.
+### 4.3 Calculate a Follow-Up Date
 
 ```sql
 SELECT
@@ -80,8 +74,7 @@ SELECT
 FROM HospitalAdmissions;
 ```
 
-### Scenario 4: Admission-to-Discharge Duration
-Calculate the number of day boundaries crossed between admission and discharge.
+### 4.4 Calculate Date Differences
 
 ```sql
 SELECT
@@ -94,8 +87,7 @@ FROM HospitalAdmissions
 WHERE DischargeDate IS NOT NULL;
 ```
 
-### Scenario 5: Billing Month-End
-Find the final date of the billing month.
+### 4.5 Identify the Billing Month-End
 
 ```sql
 SELECT
@@ -104,8 +96,7 @@ SELECT
 FROM HospitalBills;
 ```
 
-### Scenario 6: Monthly Admission Summary
-Summarize admissions by year and month.
+### 4.6 Summarize Admissions by Month
 
 ```sql
 SELECT
@@ -121,22 +112,20 @@ ORDER BY
     AdmissionMonth;
 ```
 
-*Note: The table and column names in these scenarios are illustrative. Adapt them to your actual schema before execution.*
+**Note:** The table and column names in these examples are illustrative. Adapt them to the actual hospital database schema before running them.
 
-## 🛠️ 5. Tools and Technologies
+## 5. Tools and Technologies
 
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
 - Transact-SQL (T-SQL)
-- GitHub for source control and documentation
+- GitHub
 
-## 📂 6. Project Structure
+## 6. Project Structure
 
 ```text
 03_Date_Functions/
-│
 ├── 01_Date_Functions.sql
-│
 ├── Evidence/
 │   ├── README.md
 │   ├── 1_GETDATE_SYSDATETIME.PNG
@@ -148,72 +137,52 @@ ORDER BY
 │   ├── 7_DATEFROMPARTS.PNG
 │   ├── 8_ISDATE.PNG
 │   └── 9_Admission_Summary.PNG
-│
 └── README.md
 ```
 
-The screenshot files above are planned evidence filenames. Add the actual screenshots after executing the corresponding queries in SSMS.
+The screenshot names above are planned deliverables. Add the genuine screenshots after executing the queries in SSMS.
 
-## ▶️ 7. Execution Instructions
+## 7. Execution Instructions
 
 1. Open SQL Server Management Studio.
 2. Connect to your SQL Server instance.
-3. Select the appropriate Hospital Patient Management System database.
+3. Select the intended Hospital Patient Management System database.
 4. Open `01_Date_Functions.sql`.
-5. Execute the queries using **F5**.
+5. Execute the queries using F5.
 6. Review the Results pane and verify the output.
-7. Capture genuine screenshots of the executed queries and results.
-8. Upload the screenshots to the GitHub `Evidence` folder.
+7. Capture screenshots of the executed queries and results.
+8. Upload the screenshots into the GitHub Evidence folder.
 
-**Important:** Run the script against the intended database. Review every query before executing it against production data.
+## 8. Important Learning Notes
 
-## 📸 8. Evidence and Validation
-
-The Evidence folder is intended to contain screenshots demonstrating:
-
-- Current date and time retrieval.
-- Date-component extraction.
-- Appointment weekday analysis.
-- Follow-up date calculations.
-- Admission and discharge date differences.
-- Billing month-end calculations.
-- Date construction.
-- Date validation.
-- Monthly admission reporting.
-
-Evidence should reflect actual query execution and results.
-
-## 📚 9. Important Learning Notes
-
-- `DATEDIFF()` counts boundaries crossed, not necessarily complete 24-hour periods.
+- `DATEDIFF()` counts date-part boundaries crossed, not necessarily complete 24-hour periods.
 - `GETDATE()` and `SYSDATETIME()` use the SQL Server host's system clock.
 - `DATEPART(WEEKDAY, date)` depends on the session's `DATEFIRST` setting.
-- `ISDATE()` can depend on input type and session date settings. For imported date text, consider `TRY_CONVERT(date, value)` when appropriate.
-- For patient age, subtracting birth year from the current year is insufficient; account for whether the birthday has occurred this year.
-- Real hospital systems should use appropriate data types, validation rules, access controls, and privacy safeguards.
+- `ISDATE()` has input-type and session-setting limitations. Consider `TRY_CONVERT(date, value)` for imported date text.
+- Patient age should account for whether the birthday has occurred in the current year.
+- Real hospital systems require suitable access controls and privacy safeguards.
 
-## ✅ 10. Learning Outcomes
+## 9. Learning Outcomes
 
 After completing this module, learners should be able to:
 
-- Understand commonly used SQL Server date functions.
+- Understand common SQL Server date functions.
 - Extract and analyze date components.
 - Calculate follow-up dates and date differences.
-- Support billing-period and monthly reporting requirements.
+- Support billing-period and monthly admission reporting.
 - Validate date inputs.
-- Translate hospital business requirements into SQL queries.
-- Document SQL projects professionally using GitHub.
+- Convert hospital business requirements into SQL queries.
+- Document SQL projects professionally in GitHub.
 
-## 🚀 11. Future Enhancements
+## 10. Future Enhancements
 
-- Implement date calculations using actual hospital tables.
-- Create appointment and follow-up reports.
+- Implement date functions using permanent hospital tables.
+- Build appointment and follow-up reports.
 - Develop monthly admission and discharge reports.
-- Compare billing periods and patient stays.
-- Build reusable User-Defined Functions for age and duration calculations.
+- Create reusable User-Defined Functions for age and duration calculations.
 - Integrate date-based analysis into a Power BI hospital dashboard.
 
-## 👨‍💻 12. Project Information
+## Project Information
 
 **Project:** Hospital Patient Management System  
 **Module:** System-Defined Functions — Date Functions  
@@ -222,4 +191,4 @@ After completing this module, learners should be able to:
 
 ---
 
-*Learn SQL through real-world business requirements. Practice consistently, document your work, and become a better SQL developer one step at a time.*
+*Learn SQL through practical business requirements. Keep learning, keep growing, and become 1% better than yesterday.*
