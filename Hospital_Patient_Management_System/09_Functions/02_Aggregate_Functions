@@ -1,0 +1,31 @@
+
+# Hospital Patient Management System
+
+## SQL Server — Aggregate Functions
+
+### Project Overview
+This module demonstrates SQL Server aggregate functions using hospital data.
+
+### Functions Covered
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+
+### Business Use Cases
+- Count registered patients.
+- Count doctors and appointments.
+- Calculate total billing and payments.
+- Calculate average bill amounts.
+- Identify minimum and maximum bill amounts.
+
+### Project Files
+- `01_Aggregate_Functions.sql` — SQL queries
+- `README.md` — Documentation
+- `Evidence/` — Execution screenshots
+
+### Tools
+- Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
+- GitHub
